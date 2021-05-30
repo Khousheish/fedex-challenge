@@ -1,0 +1,9 @@
+.p-menubar {
+  @media screen and (max-width: 960px) {
+    &.p-component {
+      .p-menubar-button {
+        display: none;
+      }
+    }
+  }
+}

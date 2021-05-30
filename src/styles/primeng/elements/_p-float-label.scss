@@ -1,0 +1,32 @@
+.p-float-label {
+  width: 100%;
+
+  .form-field__label {
+    left: 7px;
+    font-size: 15px;
+  }
+
+  .p-filled ~ .form-field__label,
+  .p-state-focused~ .form-field__label,
+  .p-inputwrapper-filled ~ .form-field__label,
+  .p-inputwrapper-focus ~ .form-field__label,
+  .p-inputtext:focus ~ .form-field__label,
+  .password:focus ~ .form-field__label {
+    top: 0;
+    right: unset;
+    font-size: 12px;
+    font-weight: bold;
+
+    .dark-theme & {
+      background-color: map-get($colors, fc-grey);
+    }
+
+    .light-theme & {
+      background-color: map-get($colors, fc-white);
+    }
+  }
+
+  .ng-dirty.ng-invalid ~ .form-field__label { // sass-lint:disable-line force-element-nesting
+    color: map-get($colors, fc-error);
+  }
+}
