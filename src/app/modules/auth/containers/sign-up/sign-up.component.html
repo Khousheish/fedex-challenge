@@ -1,0 +1,111 @@
+<div class="sign-up p-grid p-my-auto">
+  <p-card class="sign-up__container p-col-12 p-md-8 p-md-offset-2">
+    <h2 class="sign-up__title">{{'AUTH.SIGN_UP' | translate}}</h2>
+    <form
+      *ngIf="signUpDetailsForm"
+      class="sign-up__form"
+      [formGroup]="signUpDetailsForm"
+    >
+      <fc-float-label-field
+        translationPath="AUTH.FIELDS"
+        label="FIRST_NAME"
+        [labelFor]="fieldsNames.FirstName"
+        [formGroup]="signUpDetailsForm"
+        [isRequired]="true"
+      >
+        <input
+          pInputText
+          autocomplete="off"
+          [id]="fieldsNames.FirstName"
+          class="form-field__input"
+          type="text"
+          [formControlName]="fieldsNames.FirstName"
+        >
+      </fc-float-label-field>
+
+      <fc-float-label-field
+        translationPath="AUTH.FIELDS"
+        label="LAST_NAME"
+        [labelFor]="fieldsNames.LastName"
+        [formGroup]="signUpDetailsForm"
+        [isRequired]="true"
+      >
+        <input
+          pInputText
+          autocomplete="off"
+          [id]="fieldsNames.LastName"
+          class="form-field__input"
+          type="text"
+          [formControlName]="fieldsNames.LastName"
+        >
+      </fc-float-label-field>
+
+      <fc-float-label-field
+        translationPath="AUTH.FIELDS"
+        label="EMAIL"
+        [labelFor]="fieldsNames.Email"
+        [formGroup]="signUpDetailsForm"
+        [isRequired]="true"
+      >
+        <input
+          pInputText
+          autocomplete="off"
+          [id]="fieldsNames.Email"
+          class="form-field__input"
+          type="text"
+          [formControlName]="fieldsNames.Email"
+        >
+      </fc-float-label-field>
+
+      <fc-float-label-field
+        translationPath="AUTH.FIELDS"
+        label="PASSWORD"
+        [labelFor]="fieldsNames.Password"
+        [formGroup]="signUpDetailsForm"
+        [isRequired]="true"
+      >
+        <p-password
+          fcPasswordControl
+          [toggleMask]="true"
+          [id]="fieldsNames.Password"
+          class="form-field__password"
+          [feedback]="true"
+          [form]="signUpDetailsForm"
+          [formControlName]="fieldsNames.Password"
+        >
+          <ng-template pTemplate="footer">
+            <p-divider></p-divider>
+
+            <p>
+              {{ 'AUTH.PASSWORD.REQUIREMENTS' | translate }}
+            </p>
+
+            <ul class="requirements__list">
+              <li>
+                {{ 'AUTH.PASSWORD.MIN_LENGTH' | translate }}
+              </li>
+
+              <li>
+                {{ 'AUTH.PASSWORD.ONE_LOW_CHARACTER' | translate }}
+              </li>
+
+              <li>
+                {{ 'AUTH.PASSWORD.ONE_UP_CHARACTER' | translate }}
+              </li>
+
+              <li>
+                {{ 'AUTH.PASSWORD.NOT_FIRST_OR_NAME' | translate }}
+              </li>
+            </ul>
+          </ng-template>
+        </p-password>
+      </fc-float-label-field>
+
+      <p-button
+        [label]="'AUTH.SIGN_UP' | translate"
+        (onClick)="signUp()"
+        [disabled]="signUpDetailsForm.invalid"
+      ></p-button>
+    </form>
+  </p-card>
+</div>
