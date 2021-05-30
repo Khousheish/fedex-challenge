@@ -36,7 +36,7 @@ export class FieldErrorsComponent implements OnDestroy {
   public fieldErrors: typeof FieldErrors = FieldErrors;
 
   private control: AbstractControl | undefined;
-  private controlChangeSubscription: Subscription | undefined;
+  private controlChangeSubscription: Subscription | null = null;
 
   public constructor(
     private readonly changeDetectorRef: ChangeDetectorRef,
@@ -44,6 +44,6 @@ export class FieldErrorsComponent implements OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    (<Subscription>this.controlChangeSubscription).unsubscribe();
+    this.controlChangeSubscription?.unsubscribe();
   }
 }

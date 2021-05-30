@@ -1,8 +1,10 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MockModule } from 'ng-mocks';
 import { MessageService } from 'primeng/api';
-import { Subject } from 'rxjs';
+import { ToastModule } from 'primeng/toast';
+import { of, Subject } from 'rxjs';
 
-import { MOCKED_ERROR } from '@Mocks/state/error.mock';
+import { MOCKED_ERROR, MOCKED_ERROR_STATE } from '@Mocks/state/error.mock';
 import { Error } from '@Models/error.model';
 import { Spied } from '@Specs/types/utils.type';
 import { ErrorFacade } from '@Store/error/error.facade';
@@ -14,19 +16,25 @@ describe('ErrorToastComponent', (): void => {
 
   let component: ErrorToastComponent;
   let fixture: ComponentFixture<ErrorToastComponent>;
-  let errorFacadeStub: Partial<ErrorFacade>;
+  let mockedErrorFacade: Spied<ErrorFacade>;
   let mockMessageService: Spied<MessageService>;
 
   beforeEach(waitForAsync((): void => {
-    errorFacadeStub = { errors$ };
+    mockedErrorFacade = {
+      ...jasmine.createSpyObj('ErrorFacade', ['']),
+      errors$: of(MOCKED_ERROR_STATE),
+    };
     mockMessageService = jasmine.createSpyObj(MessageService, ['add']);
 
     TestBed.configureTestingModule({
+      imports: [
+        MockModule(ToastModule),
+      ],
       declarations: [
         ErrorToastComponent,
       ],
       providers: [
-        { provide: ErrorFacade, useValue: errorFacadeStub },
+        { provide: ErrorFacade, useValue: mockedErrorFacade },
         { provide: MessageService, useValue: mockMessageService },
       ],
     })

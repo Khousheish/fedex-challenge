@@ -16,5 +16,4 @@ export enum AuthActionsTypes {
 export const setPendingState: ActionCreatorPropsType<AuthActionsTypes.Pending, PendingProps> = createAction(AuthActionsTypes.Pending, props<PendingProps>());
 
 export const signUp: ActionCreatorPropsType<AuthActionsTypes.SignUp, SignUpProps> = createAction(AuthActionsTypes.SignUp, props<SignUpProps>());
-// change pending props
 export const signUpSuccess: ActionCreatorPropsType<AuthActionsTypes.SignUpSuccess, SignUpSuccessProps> = createAction(AuthActionsTypes.SignUpSuccess, props<SignUpSuccessProps>());

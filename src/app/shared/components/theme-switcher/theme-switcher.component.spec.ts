@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MockModule } from 'ng-mocks';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { FormsModule } from '@angular/forms';
 
 import { ThemeSwitcherService } from '@Components/theme-switcher/services/theme-switcher.service';
 import { Spied } from '@Specs/types/utils.type';
@@ -17,6 +20,10 @@ describe('ThemeSwitcherComponent', (): void => {
     };
 
     TestBed.configureTestingModule({
+      imports: [
+        MockModule(InputSwitchModule),
+        MockModule(FormsModule),
+      ],
       declarations: [
         ThemeSwitcherComponent,
       ],

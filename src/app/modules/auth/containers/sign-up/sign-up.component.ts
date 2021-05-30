@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { asyncScheduler, merge, Observable } from 'rxjs';
+import { merge, Observable } from 'rxjs';
 
 import { REGEX } from '@Consts/regex.const';
 import { FieldsNames } from '@Form/enums/field-names.enum';
-import { SignUpDetails } from '@Modules/auth/models/sign-up-details.model';
 import { ValidatorsService } from '@Services/validators.service';
 
 import { AuthFacade } from '../../store/auth.facade';
