@@ -1,0 +1,17 @@
+{
+  "FORM": {
+    "ERRORS": {
+      "IS_NOT_VALID": "{{ label }} is niet geldig",
+      "IS_REQUIRED": "{{ label }}Is benodigd",
+      "MAX": "{{ label }} moet kleiner zijn dan {{ value }}",
+      "MAX_LENGTH": "{{ label }} moet korter zijn dan {{ value }} karakters",
+      "MIN": "{{ label }} moet groter zijn dan {{ value }}",
+      "MIN_LENGTH": "{{ label }} moet langer zijn dan {{ value }} karakters",
+      "MUST_BE_INTEGER": "{{ label }} moet een geheel getal zijn",
+      "MUST_BE_SAME": "{{ label }} moet hetzelfde zijn",
+      "PASSWORD": "Wachtwoord is zwak",
+      "CONTAINS_NAME": "{{ label }} mag geen voor- of achternaam bevatten",
+      "NOT_EXIST": "{{ label }} bestaat niet"
+    }
+  }
+}

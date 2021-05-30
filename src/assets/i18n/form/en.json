@@ -1,0 +1,17 @@
+{
+  "FORM": {
+    "ERRORS": {
+      "IS_NOT_VALID": "{{ label }} is not valid",
+      "IS_REQUIRED": "{{ label }} is required",
+      "MAX": "{{ label }} must be less than {{ value }}",
+      "MAX_LENGTH": "{{ label }} must be shorter than {{ value }} characters",
+      "MIN": "{{ label }} must be greater than {{ value }}",
+      "MIN_LENGTH": "{{ label }} must be longer than {{ value }} characters",
+      "MUST_BE_INTEGER": "{{ label }} must be integer value",
+      "MUST_BE_SAME": "{{ label }} must be same",
+      "PASSWORD": "Password is weak",
+      "CONTAINS_NAME": "{{ label }} shouldn't contain first or last name",
+      "NOT_EXIST": "{{ label }} doesn't exist"
+    }
+  }
+}

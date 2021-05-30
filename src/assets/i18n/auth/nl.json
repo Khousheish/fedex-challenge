@@ -1,0 +1,19 @@
+{
+  "AUTH": {
+    "SIGN_UP": "Aanmelden",
+    "WELCOME": "Welkom {{firstName}} {{lastName}}",
+    "FIELDS": {
+      "FIRST_NAME": "Voornaam",
+      "LAST_NAME": "Achternaam",
+      "EMAIL": "E-mail",
+      "PASSWORD": "Wachtwoord"
+    },
+    "PASSWORD": {
+      "REQUIREMENTS": "Vereisten",
+      "MIN_LENGTH": "Minimaal 8 tekens",
+      "ONE_LOW_CHARACTER": "Ten minste één kleine letter",
+      "ONE_UP_CHARACTER": "Ten minste één hoofdletter",
+      "NOT_FIRST_OR_NAME": "Bevat geen voor- of achternaam"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "AUTH": {
+    "SIGN_UP": "Sign Up",
+    "WELCOME": "Welcome {{firstName}} {{lastName}}",
+    "FIELDS": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password"
+    },
+    "PASSWORD": {
+      "REQUIREMENTS": "Requirements",
+      "MIN_LENGTH": "Minimum 8 characters",
+      "ONE_LOW_CHARACTER": "At least one lowercase",
+      "ONE_UP_CHARACTER": "At least one uppercase",
+      "NOT_FIRST_OR_NAME": "Not contain first or last name"
+    }
+  }
+}
