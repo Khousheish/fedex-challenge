@@ -1,0 +1,53 @@
+<div
+  class="form-error"
+  *ngIf="fieldControl.errors; let errors"
+>
+  <div
+    *ngIf="fieldControl.invalid && (fieldControl.dirty || fieldControl.touched)"
+    class="error-message"
+  >
+    <div *ngIf="errors[fieldErrors.Required]">
+      {{ errorsTranslationPath + '.IS_REQUIRED' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.MinLength]; let error">
+      {{ errorsTranslationPath + '.MIN_LENGTH' | translate: {label: label, value: error.requiredLength} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.MaxLength]; let error">
+      {{ errorsTranslationPath + '.MAX_LENGTH' | translate: {label: label, value: error.requiredLength} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Min]; let error">
+      {{ errorsTranslationPath + '.MIN' | translate: {label: label, value: error.min} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Max]; let error">
+      {{ errorsTranslationPath + '.MAX' | translate: {label: label, value: error.max} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Integer]">
+      {{ errorsTranslationPath + '.MUST_BE_INTEGER' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Match]">
+      {{ errorsTranslationPath + '.MUST_BE_SAME' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Pattern]">
+      {{ errorsTranslationPath + '.IS_NOT_VALID' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.Password]">
+      {{ errorsTranslationPath + '.PASSWORD' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.ContainsName]">
+      {{ errorsTranslationPath + '.CONTAINS_NAME' | translate: {label: label} }}
+    </div>
+
+    <div *ngIf="errors[fieldErrors.NotExist]">
+      {{ errorsTranslationPath + '.NOT_EXIST' | translate: {label: label} }}
+    </div>
+  </div>
+</div>

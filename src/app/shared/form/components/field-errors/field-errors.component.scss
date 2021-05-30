@@ -1,0 +1,8 @@
+@import '_variables';
+
+.error-message {
+  position: relative;
+  top: 4px;
+  color: map-get($colors, fc-error);
+  font-size: 12px;
+}

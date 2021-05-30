@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
