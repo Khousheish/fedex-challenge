@@ -15,7 +15,6 @@ import { ThemeSwitcherModule } from '@Components/theme-switcher/theme-switcher.m
 import { environment } from '@Environment';
 import { ERROR_HANDLING_INTERCEPTOR_PROVIDER } from '@Interceptors/error-handling.interceptor';
 import { MultiTranslateLoader } from '@Loaders/multi-translate.loader';
-import { LocalizationService } from '@Services/localization.service';
 import { ErrorFacade } from '@Store/error/error.facade';
 import { ComponentsType, ModulesType } from '@Types/module.types';
 
@@ -53,16 +52,6 @@ const providers: Provider[] = [
   REDUCER_PROVIDER,
   ERROR_HANDLING_INTERCEPTOR_PROVIDER,
   MessageService,
-  LocalizationService,
-  {
-    provide: LOCALE_ID,
-    deps: [
-      LocalizationService,
-    ],
-    useFactory: (localizationService: LocalizationService): string => (
-      localizationService.getLanguage()
-    ),
-  },
 ];
 
 @NgModule({
