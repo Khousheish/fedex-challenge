@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -19,12 +19,36 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@AppStore": ["app/app.store"],
+      "@Components/*": ["app/shared/components/*"],
+      "@Directives/*": ["app/shared/directives/*"],
+      "@Consts/*": ["app/shared/consts/*"],
+      "@Enums/*": ["app/shared/enums/*"],
+      "@Environment": ["environments/environment"],
+      "@Form/*": ["app/shared/form/*"],
+      "@Helpers/*": ["app/core/helpers/*"],
+      "@Interceptors/*": ["app/shared/interceptors/*"],
+      "@Mocks/*": ["specs/mocks/*"],
+      "@Models/*": ["app/shared/models/*"],
+      "@Types/*": ["app/shared/types/*"],
+      "@Providers/*": ["app/shared/providers/*"],
+      "@Services/*": ["app/shared/services/*"],
+      "@Modules/*": ["app/modules/*"],
+      "@Pipes/*": ["app/shared/pipes/*"],
+      "@Specs/*": ["specs/*"],
+      "@Guards/*": ["app/shared/guards/*"],
+      "@Utils/*": ["app/core/utils/*"],
+      "@Loaders/*": ["app/shared/loaders/*"],
+      "@Store/*": ["app/shared/store/*"]
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "fullTemplateTypeCheck": true
   }
 }
