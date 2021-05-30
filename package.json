@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build--configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage",
     "lint": "sass-lint -v -c ./sass-lint.yml && tslint --project ./tsconfig.json --config ./tslint.json",
