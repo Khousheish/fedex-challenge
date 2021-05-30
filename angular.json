@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "db75aa4f-21a9-41d7-a337-8c720b82f7a6"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -30,8 +33,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -98,8 +109,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           }
@@ -107,5 +126,20 @@
       }
     }
   },
-  "defaultProject": "fedex-challenge"
+  "defaultProject": "fedex-challenge",
+  "schematics": {
+    "@schematics/angular:class": {
+      "skipTests": false
+    },
+    "@schematics/angular:component": {
+      "prefix": "fc",
+      "export": true,
+      "lintFix": true,
+      "style": "scss",
+      "changeDetection": "OnPush"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "fc"
+    }
+  }
 }
